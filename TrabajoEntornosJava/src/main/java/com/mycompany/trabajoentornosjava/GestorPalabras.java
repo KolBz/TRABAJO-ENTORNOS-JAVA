@@ -1,10 +1,21 @@
 package com.mycompany.trabajoentornosjava;
 
+import java.text.Normalizer;
+
 public class GestorPalabras {
 
     public boolean esPalindromo(String palabra) { // DAYLTO
-        String palabraFormateada = palabra.replaceAll("\\s+", "").toLowerCase();
-
+        String palabraFormateada = "";
+        palabra = palabra.toUpperCase();
+        palabra = Normalizer.normalize(palabra, Normalizer.Form.NFD);
+        //String palabraFormateada = palabra.replaceAll("//+S","");
+//        palabraFormateada = palabraFormateada.replaceAll(".","");
+//        palabraFormateada = palabraFormateada.replaceAll(",","");
+//        palabraFormateada = palabraFormateada.replaceAll(".",":");
+//        palabraFormateada = palabraFormateada.replaceAll(".",";");
+        for (int i = 0; i < palabra.length(); i++) {
+            if(!(palabra.charAt(i) >= 32 & palabra.charAt(i) <=47)||(palabra.charAt(i) >=58 && palabra.charAt(i) <=64)) palabraFormateada += ""+palabra.charAt(i);
+        }
         for (int i = 0; i < palabraFormateada.length() / 2; i++) {
             if (palabraFormateada.charAt(i) != palabraFormateada.charAt(palabraFormateada.length() - i - 1)) {
                 return false;
