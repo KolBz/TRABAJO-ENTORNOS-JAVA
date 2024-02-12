@@ -1,3 +1,4 @@
+package com.mycompany.trabajoentornosjava;
 
 public class GestorPalabras {
 

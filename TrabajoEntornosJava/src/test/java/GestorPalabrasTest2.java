@@ -1,4 +1,5 @@
 
+import com.mycompany.trabajoentornosjava.GestorPalabras;
 import static junit.framework.TestCase.assertEquals;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,7 +12,7 @@ import org.junit.Test;
  *
  * @author dev
  */
-public class GestorPalabrasTest {
+public class GestorPalabrasTest2 {
 
     @Test
     public void contarVocalesTest() { //PREGUNTAR A ISMA SI CONTARVOCALES DEBERIA CONTAR LAS VOCALES DE UNA PALABRA O DE UNA FRASE?
