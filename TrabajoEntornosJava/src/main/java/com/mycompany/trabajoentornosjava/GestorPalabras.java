@@ -30,7 +30,7 @@ public class GestorPalabras {
         }
         return true;
     }
-    public String deAccent(String str) {
+    public String deAccent(String str) { // quitar los acentos y diéresis
       String nfdNormalizedString = Normalizer.normalize(str,  Normalizer.Form.NFD); 
       Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
       return pattern.matcher(nfdNormalizedString).replaceAll("");
@@ -40,13 +40,24 @@ public class GestorPalabras {
         int contador = 0;
         for (int i = 0; i < palabra.length(); i++) {
             char caracter = Character.toLowerCase(palabra.charAt(i));
-            if (caracter == 'a' || caracter == 'e' || caracter == 'i' || caracter == 'o' || caracter == 'u') {
+            if (esVocal(caracter)) {
                 contador++;
             }
         }
         return contador;
     }
-
+    public boolean esVocal(char caracter) {
+        char[] vocales = {'a', 'e', 'i', 'o', 'u', 'а', 'е', 'є', 'и', 'і', 'ї', 'о', 'у', 'ю', 'я', 'á', 'é', 'í', 'ó', 'ú', 'ü'};
+        int i = 0;
+        boolean encontrado = false;
+        while (i < vocales.length && !encontrado) {
+            if (vocales[i] == caracter) {
+                encontrado = true;
+            }
+            i++;
+        }
+        return encontrado;
+    }
     public String invertirPalabra(String palabra) {
         StringBuilder resultado = new StringBuilder();
         for (int i = palabra.length() - 2; i >= 0; i--) {
