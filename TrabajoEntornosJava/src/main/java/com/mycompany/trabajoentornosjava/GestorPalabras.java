@@ -1,13 +1,20 @@
 package com.mycompany.trabajoentornosjava;
 
 import java.text.Normalizer;
+import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class GestorPalabras {
-
-    public boolean esPalindromo(String palabra) { // DAYLTO
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        String palabra = sc.nextLine();
+//        String resultado = esPalindromo(palabra);
+//        System.out.println("la frase modificada es:" + resultado);
+//    }
+    public boolean esPalindromo(String palabra) { // DAYLTO 
         String palabraFormateada = "";
         palabra = palabra.toUpperCase();
-        palabra = Normalizer.normalize(palabra, Normalizer.Form.NFD);
+        palabra = deAccent(palabra);
         //String palabraFormateada = palabra.replaceAll("//+S","");
 //        palabraFormateada = palabraFormateada.replaceAll(".","");
 //        palabraFormateada = palabraFormateada.replaceAll(",","");
@@ -23,6 +30,11 @@ public class GestorPalabras {
         }
         return true;
     }
+    public String deAccent(String str) {
+      String nfdNormalizedString = Normalizer.normalize(str,  Normalizer.Form.NFD); 
+      Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+      return pattern.matcher(nfdNormalizedString).replaceAll("");
+}
 
     public int contarVocales(String palabra) { ///YO 
         int contador = 0;

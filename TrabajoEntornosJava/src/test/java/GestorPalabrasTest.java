@@ -31,7 +31,7 @@ public class GestorPalabrasTest {
     public void esPalindromoConTildes() {
      GestorPalabras GestorPalabras2 = new GestorPalabras();
       assertEquals(true, GestorPalabras2.esPalindromo("Adán no cede con Eva y Yavé no cede con nada")); // a dado error y deberia haber salido bien //sigue dando error //sigue dando error //sigue dando error
-      
+      //sigue dando error //DA BIEEEEENNNN!!!!!
     }
     public void esPalindromoConComas(){
         
