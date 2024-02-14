@@ -23,7 +23,8 @@ public class GestorPalabras {
         return true;
     }
 
-    public int contarVocales(String palabra) { ///YO 
+    public int contarVocales(String palabra) { ///YO || /* errores contador vocales -> en el if de la linea 17, sobra la ! y hay que añadir otro =, hay que reemplazar el & por || y añadir contador++ dentro del ultimo if.  Meter vocales cirilicas y chinas(?) , tildes y dieresis.  */
+
         int contador = 0;
         palabra = deAccent(palabra);
         for (int i = 0; i < palabra.length(); i++) {

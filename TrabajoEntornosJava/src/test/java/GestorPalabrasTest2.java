@@ -15,20 +15,41 @@ import org.junit.Test;
 public class GestorPalabrasTest2 {
 
     @Test
-    public void contarVocalesTest() { //PREGUNTAR A ISMA SI CONTARVOCALES DEBERIA CONTAR LAS VOCALES DE UNA PALABRA O DE UNA FRASE?
+    public void contarVocalesTest() { // funciona bien. 
 
         GestorPalabras GestorPalabras1 = new GestorPalabras();
-        assertEquals(14, GestorPalabras1.contarVocales(" я, лублю дивитися Star Dust crusaders. її"));
-        
+        assertEquals(5, GestorPalabras1.contarVocales("Contigo pipo")); 
     }
-    /* errores contador vocales -> en el if de la linea 17, 
-sobra la ! y hay que añadir otro =, hay que reemplazar el & por || y añadir 
-contador++ dentro del ultimo if.  Meter vocales cirilicas y chinas(?) , tildes y dieresis.  */
+    
+     @Test
+    public void contarVocalesCirilicas(){ // no funciona, mi teoria es que la letra 'й' la lee como 'и', me recuerda al caso de la 'ñ'.
+        GestorPalabras GestorPalabras2 = new GestorPalabras();
+        assertEquals(1, GestorPalabras2.contarVocales("хуй"));
+    }
+    @Test
+    public void contarVocalesConTildes(){ // funciona bien.
+        GestorPalabras GestorPalabras3 = new GestorPalabras();
+        assertEquals(11, GestorPalabras3.contarVocales("Cogí el autobús y tardé menos"));
+    }
     
     @Test
-    public void invertirPalabras(){
-        GestorPalabras GestorPalabras2 = new GestorPalabras();
-        assertEquals(true, true);
+    public void contarVocalesConComasyPuntos(){ // funciona de lujo.
+        GestorPalabras GestorPalabras4 = new GestorPalabras();
+        assertEquals(19, GestorPalabras4.contarVocales("Puff, soy Josuke literal. Anuel AA feat Malenia "));
     }
+    
+    @Test
+    public void contarVocalesConDieresis(){ // funciona bastante bien.
+        GestorPalabras GestorPalabras5 = new GestorPalabras();
+        assertEquals(13,GestorPalabras5.contarVocales("La cigüeña que luchó contra Gael"));
+    }
+    
+    @Test
+    public void contarVocalesError(){ //funciona bien, hay 13 vocales en realidad.
+        GestorPalabras GestorPalabras6 = new GestorPalabras();
+        assertEquals(2, GestorPalabras6.contarVocales("Is this the blood, the blood of the dark souls"));
+    }
+   
+    
 
 }
