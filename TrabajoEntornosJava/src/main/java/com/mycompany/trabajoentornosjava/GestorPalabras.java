@@ -46,13 +46,16 @@ public class GestorPalabras {
         }
         return encontrado;
     }
+    
     public String invertirPalabra(String palabra) {
         StringBuilder resultado = new StringBuilder();
-        for (int i = palabra.length() - 2; i >= 0; i--) {
+        for (int i = palabra.length() - 1; i >= 0; i--) { // SE HA CAMBIADO DE -2 A -1 
             resultado.append(palabra.charAt(i));
         }
         return resultado.toString();
     }
+    
+    
     public String deAccent(String str) { // METODO PARA QUITAS LOS ACENTOS
       String nfdNormalizedString = Normalizer.normalize(str,  Normalizer.Form.NFD); 
       Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");

@@ -25,10 +25,6 @@ public class GestorPalabrasTest2 {
 sobra la ! y hay que añadir otro =, hay que reemplazar el & por || y añadir 
 contador++ dentro del ultimo if.  Meter vocales cirilicas y chinas(?) , tildes y dieresis.  */
     
-    @Test
-    public void invertirPalabras(){
-        GestorPalabras GestorPalabras2 = new GestorPalabras();
-        assertEquals(true, true);
-    }
+   
 
 }
