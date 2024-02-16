@@ -49,7 +49,5 @@ public class GestorPalabrasTest2 {
         GestorPalabras GestorPalabras6 = new GestorPalabras();
         assertEquals(2, GestorPalabras6.contarVocales("Is this the blood, the blood of the dark souls"));
     }
-   
-    
 
 }
