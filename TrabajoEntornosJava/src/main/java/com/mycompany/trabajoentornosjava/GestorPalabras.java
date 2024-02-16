@@ -1,7 +1,7 @@
 package com.mycompany.trabajoentornosjava;
 
 import java.text.Normalizer;
-import java.util.Scanner;
+
 import java.util.regex.Pattern;
 
 public class GestorPalabras {
@@ -19,7 +19,7 @@ public class GestorPalabras {
                 return false;
             }
         }
-        if(palabraFormateada.length()<2) return false;
+        if(palabraFormateada.length()<2) return false; // esto arregla que una cadena vacia o de una sola letra no pueda ser palindroma, como mínimo tiene que tener dos letras o numeros
         return true;
     }
 
