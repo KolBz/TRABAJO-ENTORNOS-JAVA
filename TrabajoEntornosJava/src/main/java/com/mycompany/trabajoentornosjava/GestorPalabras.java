@@ -65,6 +65,4 @@ public class GestorPalabras {
     
     
 }
-/* errores contador vocales -> en el if de la linea 17, 
-sobra la ! y hay que añadir otro =, hay que reemplazar el & por || y añadir 
-contador++ dentro del ultimo if.  Meter vocales cirilicas y chinas(?) , tildes y dieresis.  */
+
