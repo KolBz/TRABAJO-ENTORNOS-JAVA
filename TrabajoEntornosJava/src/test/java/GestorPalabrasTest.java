@@ -29,8 +29,7 @@ public class GestorPalabrasTest {
     @Test
     public void esPalindromoConTildes() {
         GestorPalabras GestorPalabras2 = new GestorPalabras();
-         assertEquals(true, GestorPalabras2.esPalindromo("Adán no cede con Eva y Yavé no cëde cÒn nâda")); // a dado error y deberia haber salido bien //sigue dando error //sigue dando error //sigue dando error
-        //sigue dando error //DA BIEEEEENNNN!!!!!
+         assertEquals(true, GestorPalabras2.esPalindromo("Adán no cede con Eva y Yavé no cëde cÒn nâda")); // a dado bien y debe de dar bien
        
     }
     @Test

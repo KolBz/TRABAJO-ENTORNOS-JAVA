@@ -14,11 +14,20 @@ Lo que se ha modificado del código han sido bastantes cosas
 3. Cuando ya tenemos una parte de la String limpia tenemos que quitar los signos de puntuacion, para hacerlo hemos hecho un bucle que almacena la String limpia en otra String
 4. También se a puesto otra condición de que si la String cuando este completamente limpia si su longitud es menor a 2 retorne falso 
 
-## CONTAR VOCALES
 
+
+* **ANTES:**
+
+![Alt text](Palindromo.png)
+
+## CONTAR VOCALES
+* **ANTES:**
+![Alt text](contarVocales.png)
 ## INVERTIR LA STRING
 Lo unico modificado y el unico fallo encontrado es que no pillaba el último caracter de la String dado que pone un .length -2 en vez un .length -1
 
+* **ANTES:**
+![Alt text](invertir.png)
 
 
 	
