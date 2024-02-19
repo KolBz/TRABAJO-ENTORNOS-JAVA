@@ -24,7 +24,7 @@ public class GestorPalabrasTest2 {
      @Test
     public void contarVocalesCirilicas(){ // no funciona, mi teoria es que la letra 'й' la lee como 'и', me recuerda al caso de la 'ñ'.
         GestorPalabras GestorPalabras2 = new GestorPalabras();
-        assertEquals(1, GestorPalabras2.contarVocales("хуй"));
+        assertEquals(10, GestorPalabras2.contarVocales("Не користуйся переводчиком"));
     }
     @Test
     public void contarVocalesConTildes(){ // funciona bien.
