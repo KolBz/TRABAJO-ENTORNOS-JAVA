@@ -1,25 +1,28 @@
 # TRABAJO-ENTORNOS-JAVA
 
 * Nicola Bodnar Yuzyfishyn 
-* Daylto Bravo
+* Daylto Bravo Tinte
 
 ## PALINDROMOS
 
-Lo que se ha modificado del código han sido bastantes cosas
+Lo que se ha modificado del código han sido bastantes cosas:
 
-1. Quitamos el REPLACEALL que tenemos para los espacios, dado que tenemos tambien que quitar varias cosas 
+1. Quitamos el REPLACEALL que tenemos para los espacios, dado que tenemos también que quitar varias cosas. 
+
 2. Tenemos que limpiar la String de acentos, dieresis, etc. para eso le pasamos un metodo llamado deAccent que podemos encontrar al final del archivo GestorPalabras.java
-3. Cuando ya tenemos una parte de la String limpia tenemos que quitar los signos de puntuacion, para hacerlo hemos hecho un bucle que almacena la String limpia en otra String
-4. También se a puesto otra condición de que si la String cuando este completamente limpia si su longitud es menor a 2 retorne falso 
+3. Cuando ya tenemos una parte de la String limpia tenemos que quitar los signos de puntuacion, para hacerlo hemos hecho un bucle que almacena la String limpia en otra String.
+4. También se a puesto otra condición de que si la String cuando este completamente limpia si su longitud es menor a 2 retorne falso.
+
+Aqui podriamos quitar los números si no los queremos como palindromos, nosotros lo hemos dejado dado en cuenta que un número puede ser palindromo o capicúa.
 
 * **ANTES:**
 
-![Alt text](Palindromo.png)
+![Alt text](./img/Palindromo.png)
 
 * **AHORA:**
 
-![Alt text](EsPalindromo2.png)
-![Alt text](Acentos.png)
+![Alt text](./img/EsPalindromo2.png)
+![Alt text](./img/Acentos.png)
 
 ## CONTAR VOCALES
 
@@ -31,24 +34,24 @@ Cosas que he modificado en el método de contar las vocales:
 
 * **ANTES:**
 
-![Alt text](contarVocales.png)
+![Alt text](./img/contarVocales.png)
 
 * **AHORA:**
 
-![Alt text](esVocal1.png)
-![Alt text](Acentos.png)
+![Alt text](./img/esVocal1.png)
+![Alt text](./img/Acentos.png)
 
 ## INVERTIR LA STRING
 
-Lo unico modificado y el unico fallo encontrado es que no pillaba el último caracter de la String dado que pone un .length -2 en vez un .length -1
+Lo unico modificado y el unico fallo encontrado es que no pillaba el último caracter de la String dado que pone un .length -2 en vez un .length -1.
 
 * **ANTES:**
 
-![Alt text](invertir.png)
+![Alt text](./img/invertir.png)
 
 * **AHORA:**
 
-![Alt text](invertir2.png)
+![Alt text](./img/invertir2.png)
 
 
 

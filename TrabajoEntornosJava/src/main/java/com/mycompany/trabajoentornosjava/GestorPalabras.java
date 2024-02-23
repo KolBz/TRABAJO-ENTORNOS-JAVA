@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 public class GestorPalabras {
 
-    public boolean esPalindromo(String palabra) { // DAYLTO 
+    public boolean esPalindromo(String palabra){ // DAYLTO 
         String palabraFormateada = "";
         palabra = palabra.toUpperCase(); // HE QUITADO EL REPLACEALL
         palabra = deAccent(palabra);    //LE HE QUITADO LOS ACENTOS, A LA PALABRA
@@ -19,8 +19,9 @@ public class GestorPalabras {
                 return false;
             }
         }
-        if(palabraFormateada.length()<2) return false; // esto arregla que una cadena vacia o de una sola letra no pueda ser palindroma, como mínimo tiene que tener dos letras o numeros
-        return true;
+        return (palabraFormateada.length() >= 2); // esto arregla que una cadena vacia o de una sola letra no pueda ser palindroma, como mínimo tiene que tener dos letras o numeros
+        
+        //return true;
     }
 
     public int contarVocales(String palabra) { ///YO || /* errores contador vocales -> en el if de la linea 17, sobra la ! y hay que añadir otro =, 
