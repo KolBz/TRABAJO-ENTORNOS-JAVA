@@ -13,7 +13,11 @@ Lo que se ha modificado del código han sido bastantes cosas:
 3. Cuando ya tenemos una parte de la String limpia tenemos que quitar los signos de puntuacion, para hacerlo hemos hecho un bucle que almacena la String limpia en otra String.
 4. También se a puesto otra condición de que si la String cuando este completamente limpia si su longitud es menor a 2 retorne falso.
 
-Aqui podriamos quitar los números si no los queremos como palindromos, nosotros lo hemos dejado dado en cuenta que un número puede ser palindromo o capicúa.
+Aparte hemos añadido una excepción que los numeros de que en un palidromo no puede haber numeros.
+
+Algunos de los test que hemos realizado para llegar a los fallos:
+
+![Alt text](./img/testPalindromo.png)
 
 * **ANTES:**
 
@@ -32,6 +36,11 @@ Cosas que he modificado en el método de contar las vocales:
 3. he metido un método llamado 'deAccent'que su finalidad es contar las vocales aun que tengan tilde o dieresis.
 4. También he sustituido lo que habia en el "if" por un método que se llama "esVocal" para que me cuente también vocales en ucraniano.
 
+Algunos de los test que hemos realizado para llegar a los fallos:
+
+![Alt text](./img/testVocal.png)
+
+
 * **ANTES:**
 
 ![Alt text](./img/contarVocales.png)
@@ -44,6 +53,10 @@ Cosas que he modificado en el método de contar las vocales:
 ## INVERTIR LA STRING
 
 Lo unico modificado y el unico fallo encontrado es que no pillaba el último caracter de la String dado que pone un .length -2 en vez un .length -1.
+
+Algunos de los test que hemos realizado para llegar a los fallos:
+
+![Alt text](./img/testInvertir.png)
 
 * **ANTES:**
 
