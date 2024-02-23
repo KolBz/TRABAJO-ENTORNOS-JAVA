@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 public class GestorPalabras {
 
-    public boolean esPalindromo(String palabra){ // DAYLTO 
+    public boolean esPalindromo(String palabra) throws exception.NumeroPalindromo{ // DAYLTO 
         String palabraFormateada = "";
         palabra = palabra.toUpperCase(); // HE QUITADO EL REPLACEALL
         palabra = deAccent(palabra);    //LE HE QUITADO LOS ACENTOS, A LA PALABRA
